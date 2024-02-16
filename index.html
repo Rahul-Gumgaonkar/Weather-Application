@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="upper-header">
+        <h1 id="heading">WEATHER APP</h1>
+        <div class="nav" id="nav">
+          <p id="left-nav">Your Weather</p>
+          <p id="right-nav">Search Weather</p>
+        </div>
+      </header>
+
+      <section>
+        <div class="weather-container">
+          <!-- Grant Location Container -->
+          <div class="grant-location-container">
+            <img
+              width="70px"
+              id="location-img"
+              src="/Assets/location.png"
+              alt="Image"
+            />
+            <h2>Grant Location Access</h2>
+            <p>Allow Access to get weather Information</p>
+            <button class="btn access-btn">GRANT ACCESS</button>
+          </div>
+
+          <!-- search form -> form-container-->
+          <form class="form-container active-location">
+            <input id="city-name" placeholder="Search for City..." required />
+            <button id="submit-btn" class="btn" type="submit">
+              <img
+                src="./Assets/search.png"
+                width="20"
+                height="20"
+                loading="lazy"
+              />
+            </button>
+          </form>
+
+          <div class="loading active-location">
+            <img width="100px" src="/Assets/loading.gif" alt="" />
+          </div>
+
+          <div class="inner-container active-location">
+            <div class="city-name"></div>
+            <div class="weather-condition"></div>
+            <div class="weather-icon">
+              <img src="/Assets/cloud.png" alt="" />
+            </div>
+            <div class="temp-container">
+              <div class="temp">00.00</div>
+              <div class="image-container">
+                <div class="left-img box">
+                  <img src="/Assets/wind.png" alt="" />
+                  <p>WINDSPEED</p>
+                  <p></p>
+                </div>
+                <div class="middle-img box">
+                  <img src="/Assets/humidity.png" alt="" />
+                  <p>HUMIDITY</p>
+                  <p>0.0</p>
+                </div>
+                <div class="right-img box">
+                  <img src="/Assets/cloud.png" alt="" />
+                  <p>CLOUDS</p>
+                  <p>0.0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
